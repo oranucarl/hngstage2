@@ -1,13 +1,13 @@
 //"use strict";
 const express = require('express');
 const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
 const userRouter = express.Router();
 userRouter.use(bodyParser.json());
 
 const Users = require('../models/users');
  
-userRouter.route('/') 
+userRouter.route('/api') 
 .get(( req, res, next) => { 
     Users.find({})
     .then((users) => {
@@ -42,7 +42,7 @@ userRouter.route('/')
     .catch((err) => next(err));
 });
 
-userRouter.route('/:user_Id')
+userRouter.route('/api:user_Id')
 .get((req,res,next) => { 
     Users.findById(req.params.user_Id)
     .then((user) => {

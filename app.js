@@ -1,23 +1,22 @@
+require("dotenv").config()
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
-
 var userRouter = require('./routes/userRouter');
 
 const mongoose = require('mongoose');
 
 //const Users = require('../models/users');
-const url = 'mongodb://localhost:27017/conFusion';
+const url = process.env.DB_URL;
 
-const connect = mongoose.connect(url);
+const connect = mongoose.connect(url, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
 
-connect.then((db) => {
-  console.log('Connected correctly to user server!');
-}, (err) => { console.log(err); });
-
+connect.then(() => {console.log("connected to database!")}).catch((error)=> {console.log(error)} )
 var app = express();
 
 // view engine setup
@@ -30,8 +29,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+//app.use('/', indexRouter);
+app.use('/users', userRouter);
 
 // catch 404 and forward to error handler || global handler error 
 app.use(function(req, res, next) {
