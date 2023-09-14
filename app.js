@@ -16,7 +16,7 @@ const connect = mongoose.connect(url, {
     useUnifiedTopology: true,
 })
 
-connect.then(() => {console.log("connected to database!")}).catch((error)=> {console.log(error)} )
+connect.then(() => {console.log("connected to database!")}).catch((error)=> {console.log(error)});
 var app = express();
 
 // view engine setup
@@ -30,7 +30,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //app.use('/', indexRouter);
-app.use('/users', userRouter);
+app.use('/', userRouter);
 
 // catch 404 and forward to error handler || global handler error 
 app.use(function(req, res, next) {
