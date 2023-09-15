@@ -87,4 +87,4 @@ https://api-hngstage2.onrender.com/api
 
 ### Deployed
 
-To use the deployed version of the API, the base URL is https://personapi-xc6z.onrender.com (with the routes attached for any of the CRUD operations)
+To use the deployed version of the API, the base URL is https://api-hngstage2.onrender.com/api (with the routes attached for any of the CRUD operations)
