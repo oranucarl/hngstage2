@@ -8,16 +8,16 @@ userRouter.use(bodyParser.json());
 const Users = require('../models/users');
  
 userRouter.route('/api') 
-// .get(( req, res, next) => { 
-//     Users.find({})
-//     .then((users) => {
-//         res.statusCode = 200;
-//         res.setHeader('Content-Type', 'application/json');
-//         //res users to the client in the body of the respond
-//         res.json(users);
-//     }, (err) => next(err))
-//     .catch((err) => next(err));
-// })
+.get(( req, res, next) => { 
+    Users.find({})
+    .then((users) => {
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'application/json');
+        //res users to the client in the body of the respond
+        res.json(users);
+    }, (err) => next(err))
+    .catch((err) => next(err));
+})
 .post((req ,res , next) => {
 
     if (typeof req.body.name != "string") (
