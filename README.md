@@ -20,7 +20,7 @@ A simple API built with NodeJS, that performs basic CRUD functionalities and sto
 
 The above functionalities performed using MongoDB Atlas database.
 ## UML Diagram
-![Person API - Page 1(1)](https://github.com/VictorChukwudi/hng_stage_two/assets/81536363/89533098-6d9b-48e8-a93c-cb8f87448fdb)
+![Person API - Page 1(1)](https://github.com/oranucarl/hngstage2/blob/main/public/images/umldiagram.png)
 ## Prerequisites
 
 To run this API locally or following through the implementation, [Node.js](nodejs.org/en) runtime environment is required, most preferably, the long term support (LTS) version.
