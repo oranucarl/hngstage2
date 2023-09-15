@@ -29,10 +29,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-//app.use('/', indexRouter);
+//Mounting Router Endpoint
 app.use('/', userRouter);
 
-// catch 404 and forward to error handler || global handler error 
+//catch 404 and forward to error handler || global handler error 
 app.use(function(req, res, next) {
   next(createError(404));
 });
