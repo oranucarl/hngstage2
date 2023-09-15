@@ -3,7 +3,7 @@
 **Base URLs**:
 
 - local: http://localhost:4000
-- deployed: https://personapi-xc6z.onrender.com
+- deployed: https://api-hngstage2.onrender.com/api
 
 ## Endpoints
 
@@ -14,12 +14,12 @@
 - Summary: Adds a new person.
 - Request Body (JSON): name (required)
 - Responses:
-  - 20o: Success Response
+  - 200: Success Response
   - 400: Bad Request
 - Examples:
   - Request body:
     `{
-    "name": "Mark Essien"
+    "name": "Hakim Jenkings"
 }`
   - Responses:
     - 201:
@@ -37,7 +37,7 @@
     ```
     {
         "status": "error",
-        "message": "name field should be a string"
+        "message": "Invalid name Type"
     }
     ```
 
