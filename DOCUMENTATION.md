@@ -93,19 +93,19 @@
   - 404: Resource not found
 - Examples:
   - Request Parameter (required):
-    `PUT {baseURL}/api/6503164dc274bb1b8993e652`
+    `PUT {baseURL}/api/6503c75bfa5971d22a76659b'
   - Request Body {optional}:
-    `{"name": "Mark Twain"}`
+    `{"name": "Ron Jenkings"}`
   - Responses:
     - 200:
     ```
-    {
-        "status": "success",
-        "message": "Person with Id: 6503164dc274bb1b8993e652 has been updated.",
-        "data": {
-            "id":"6503164dc274bb1b8993e652",
-            "name":"Mark Twain"
-        }
+    {  
+        "name": "Ron Jenkings",
+        "description": "PostGraduate Student",
+        "_id": "6503c75bfa5971d22a76659b",
+        "createdAt": "2023-09-15T02:54:20.041Z",
+        "updatedAt": "2023-09-15T02:54:20.041Z",
+        "__v": 0
     }
     ```
     - 400:
@@ -132,7 +132,7 @@
 - Responses:
   - 200: Success Response
   - 400: Bad Request
-  - 404: Resource not found
+  - 404: Person not found
   - 500: Error
 - Examples:
   - Request Parameter (required):
