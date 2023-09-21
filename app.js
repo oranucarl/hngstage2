@@ -16,7 +16,7 @@ const connect = mongoose.connect(url, {
     useUnifiedTopology: true,
 })
 
-connect.then(() => {console.log("connected to database!")}).catch((error)=> {console.log(error)});
+connect.then(() => {console.log("connected to cloud database!")}).catch((error)=> {console.log(error)});
 var app = express();
 
 // view engine setup
